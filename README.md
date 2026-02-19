@@ -27,7 +27,7 @@ Utilize structured (transactional and inventory) and unstructured data (social m
 # Dashboard Overview :
 
 
-<img width="1488" height="616" alt="image" src="https://github.com/user-attachments/assets/cb7c004a-60c9-4204-8f9e-b58b87139bf1" />
+<img width="2130" height="1412" alt="image" src="https://github.com/user-attachments/assets/0a00520d-986a-46a0-b419-dde52d3f7e81" />
 
 
 
@@ -54,7 +54,7 @@ At this stage, the data is stored in its original format (e.g., JSON, text, logs
 <img width="1252" height="508" alt="image" src="https://github.com/user-attachments/assets/7ef92db4-7ebd-4ae7-9b68-a3767b20a5f7" />
 
 
-Bronze Layer – Parquet Standardization Using Notebook:
+## Bronze Layer – Parquet Standardization Using Notebook:
 
 After the pipeline ingests raw files into the Lakehouse (Files folder), a Fabric Notebook (PySpark) is used to read the ingested data directly from the Bronze location. The data is loaded into Spark DataFrames and written back in Parquet format using overwrite mode.
 The Parquet files are stored in designated Lakehouse paths (e.g., Files/ShoppingMart_Silver_reviews, Files/ShoppingMart_Silver_social, Files/ShoppingMart_Silver_weblogs).
@@ -146,7 +146,9 @@ customer_df.write.mode("overwrite").parquet("Files/ShoppingMart_Gold_Customers/S
 
 ```
 
-📊 Semantic Model & Dashboard Creation
+
+
+##  📊 Semantic Model & Dashboard Creation
 After preparing the transformed tables in the Lakehouse, a Semantic Model was created to enable reporting and analytics.
 The semantic model includes the following tables:
 * Customer Table
@@ -165,7 +167,7 @@ This semantic layer acts as the business-ready data model that powers reporting 
 
 <img width="1874" height="704" alt="image" src="https://github.com/user-attachments/assets/7afc98f8-4435-4bda-b559-b971afbcee92" />
 
-📈 Interactive Dashboard – Shopping Mart Analytics KPI Metrics:
+## 📈 Interactive Dashboard – Shopping Mart Analytics KPI Metrics:
 
 The final phase of the project involved designing and deploying an interactive Power BI dashboard powered by the curated semantic model. This dashboard serves as a centralized analytics layer, transforming processed data into actionable business intelligence.
 Report Capabilities
